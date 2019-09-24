@@ -1,0 +1,7 @@
+C:\Users\USER\source\repos\EmpDetails\EmpDetails\bin\Debug\EmpDetails.exe.config
+C:\Users\USER\source\repos\EmpDetails\EmpDetails\bin\Debug\EmpDetails.exe
+C:\Users\USER\source\repos\EmpDetails\EmpDetails\bin\Debug\EmpDetails.pdb
+C:\Users\USER\source\repos\EmpDetails\EmpDetails\obj\Debug\EmpDetails.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\EmpDetails\EmpDetails\obj\Debug\EmpDetails.exe
+C:\Users\USER\source\repos\EmpDetails\EmpDetails\obj\Debug\EmpDetails.pdb
+C:\Users\USER\source\repos\EmpDetails\EmpDetails\obj\Debug\EmpDetails.csprojAssemblyReference.cache
