@@ -64,7 +64,7 @@ namespace EmpDetails
 
                     if (DateTime.TryParse(fromDate, out dateFrom))
                     {
-                        fromDate = string.Format("{0:yyyy-MM-dd}",dateFrom);
+                        fromDate = string.Format("{0:dd-MM-yyyy}",dateFrom);
                         loopContinueFrom = false;
                     }
                     else
@@ -81,8 +81,17 @@ namespace EmpDetails
 
                     if (DateTime.TryParse(toDate, out dateTo))
                     {
-                        toDate= string.Format("{0:yyyy-MM-dd}",dateTo);
-                        loopContinueTo = false;
+                        toDate= string.Format("{0:dd-MM-yyyy}",dateTo);
+
+			DateTime fromData = Convert.ToDateTime(fromDate);
+			DateTime toData = Convert.ToDateTime(toDate);
+			int dateResult = DateTime.Compare(fromData,toData);
+				if(dateResult == 0)
+					Console.WriteLine("\n Date Must Not Be Same...");
+				else if(dateResult > 0)
+					Console.WriteLine("\n FromDate Must Be Earlier Than ToDate...");
+				else
+                        		loopContinueTo = false;
                     }
                     else
                         Console.WriteLine("\n Sorry!! Please Give An Valid Data...");
@@ -118,7 +127,7 @@ namespace EmpDetails
                     else
                         Console.WriteLine("Please Put Valid Data");
                 }
-                //int empHistoryID = _SqlServer.JobIDExist(jobid);
+                
                 if (empHistoryID != 0)
                 {
                     bool loopContinue = true;
@@ -179,7 +188,7 @@ namespace EmpDetails
 
                         if (DateTime.TryParse(fromDate, out dateFrom))
                         {
-                            string.Format("{0:yyyy-mm-dd}", dateFrom);
+                            string.Format("{0:dd-MM-yyyy}", dateFrom);
                             loopContinueFrom = false;
                         }
 
@@ -197,8 +206,17 @@ namespace EmpDetails
 
                         if (DateTime.TryParse(toDate, out dateTo))
                         {
-                            string.Format("{0:yyyy-mm-dd}", dateTo);
-                            loopContinueTo = false;
+                            string.Format("{0:dd-MM-yyyy}", dateTo);
+			    
+			    DateTime fromData = Convert.ToDateTime(fromDate);
+			    DateTime toData = Convert.ToDateTime(toDate);
+			    int dateResult = DateTime.Compare(fromData,toData);
+			    if(dateResult == 0)
+				Console.WriteLine("\n Date Must Not Be Same...");
+			    else if(dateResult > 0)
+				Console.WriteLine("\n FromDate Must Be Earlier Than ToDate...");			    
+			    else
+                            	loopContinueTo = false;
                         }
                         else
                             Console.WriteLine("\n Sorry!! Please Give An Valid Data...");
